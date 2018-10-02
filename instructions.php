@@ -7,16 +7,14 @@
 <?php
 if (!empty($_POST['first_name'])) {
   $first_name = $_POST['first_name'];
-  session_start();
-  $_SESSION['personal_data']['first_name'] = $first_name;
-}
-
-if (session_id() == '' || !isset($_SESSION)) {
-  // session isn't started
-  session_start();
-}
-else {
-  // @TODO: Maybe redirect to homepage if no session started?.
+  if (!isset($_SESSION)) {
+    // session isn't started
+    session_start();
+    $_SESSION['personal_data']['first_name'] = $first_name;
+  }
+  else {
+    // @TODO: Maybe redirect to homepage if no session started?.
+  }
 }
 ?>
 

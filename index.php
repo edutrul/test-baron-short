@@ -5,7 +5,7 @@
 ?>
 
 <?php
-if (session_id() == '' || !isset($_SESSION)) {
+if (!isset($_SESSION)) {
   // session isn't started
   session_start();
 }

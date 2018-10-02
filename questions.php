@@ -4,8 +4,13 @@
  */
 ?>
 
-
 <?php
+
+if (!isset($_SESSION)) {
+  // session isn't started
+  session_start();
+}
+print_r($_SESSION);
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
@@ -27,7 +32,6 @@ $nextQuestionUrl5 = $basePath . '?question_id=' . $nextQuestionId . '&previous_r
 //      [ponderation] => 0
 //    )
 $question = !empty($questions[$questionId]) ? $questions[$questionId] : NULL;
-
 // Here we store answers from previous question:
 if (!empty($_GET['previous_response'])) {
 
