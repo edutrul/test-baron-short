@@ -19,6 +19,7 @@ require_once 'list_questions.php';
 $questionId = isset($_GET['question_id']) ? $_GET['question_id'] -1 : '';
 // The next question to ask to user.
 $nextQuestionId = $questionId + 2;
+$previousQuestionId = $questionId;
 $basePath = 'questions.php';
 $nextQuestionUrl1 = $basePath . '?question_id=' . $nextQuestionId . '&previous_response=1';
 $nextQuestionUrl2 = $basePath . '?question_id=' . $nextQuestionId . '&previous_response=2';
@@ -34,7 +35,7 @@ $nextQuestionUrl5 = $basePath . '?question_id=' . $nextQuestionId . '&previous_r
 $question = !empty($questions[$questionId]) ? $questions[$questionId] : NULL;
 // Here we store answers from previous question:
 if (!empty($_GET['previous_response'])) {
-
+  //$_SESSION['questions'][]
 }
 
 ?>
