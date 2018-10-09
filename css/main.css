@@ -9,11 +9,14 @@ body{
 
 }
 .container{
-    max-width: 50%;
-    width: 100%;
-    margin: auto;
+    max-width: 80%;
+    width: 50%;
+    height: auto;
+    margin: 0 0 10px 20%;
     position: relative;
 }
+
+
 #data{
     background-color: #F9F9F9;
     padding: 15px;
@@ -36,12 +39,14 @@ fieldset{
     font-size: 15px;
 }
 #data button[type="submit"] {
+
     cursor:pointer;
-    width:100%;
+    width:50%;
     border:none;
     background:#0CF;
     color:#FFF;
-    margin:0 0 5px;
+
+    margin:0 0 5px 149px;
     padding:10px;
     font-size:15px;
 }
