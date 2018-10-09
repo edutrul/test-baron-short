@@ -10,8 +10,7 @@ if (!isset($_SESSION)) {
   // session isn't started
   session_start();
 }
-print_r($_SESSION);
-
+//unset($_SESSION['questions']);
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
@@ -19,13 +18,9 @@ require_once 'list_questions.php';
 $questionId = isset($_GET['question_id']) ? $_GET['question_id'] -1 : '';
 // The next question to ask to user.
 $nextQuestionId = $questionId + 2;
-$previousQuestionId = $questionId;
+$previousQuestionId = $questionId -1;
 $basePath = 'questions.php';
-$nextQuestionUrl1 = $basePath . '?question_id=' . $nextQuestionId . '&previous_response=1';
-$nextQuestionUrl2 = $basePath . '?question_id=' . $nextQuestionId . '&previous_response=2';
-$nextQuestionUrl3 = $basePath . '?question_id=' . $nextQuestionId . '&previous_response=3';
-$nextQuestionUrl4 = $basePath . '?question_id=' . $nextQuestionId . '&previous_response=4';
-$nextQuestionUrl5 = $basePath . '?question_id=' . $nextQuestionId . '&previous_response=5';
+$nextQuestionUrl = $basePath . '?question_id=' . $nextQuestionId . '&previous_response=';
 // Get the question in array format
 // Array
 //    (
@@ -33,19 +28,25 @@ $nextQuestionUrl5 = $basePath . '?question_id=' . $nextQuestionId . '&previous_r
 //      [ponderation] => 0
 //    )
 $question = !empty($questions[$questionId]) ? $questions[$questionId] : NULL;
+$previousResponse = !empty($_SESSION['questions'][$questionId]) ? $_SESSION['questions'][$questionId] : NULL;
+print $previousQuestionId;
+print $previousResponse;
 // Here we store answers from previous question:
-if (!empty($_GET['previous_response'])) {
-  //$_SESSION['questions'][]
+if (!empty($_GET['previous_response']) && $previousQuestionId !== -1) {
+  $_SESSION['questions'][$previousQuestionId] = $_GET['previous_response'];
+  $previousResponse = $_GET['previous_response'];
 }
+
+print_r($_SESSION);
+
 
 ?>
 <?php if (!empty($question)): ?>
   <h1><?php print $question['question']; ?></h1>
-  <a href="<?php print $nextQuestionUrl1 ?>">1</a>
-  <a href="<?php print $nextQuestionUrl2 ?>">2</a>
-  <a href="<?php print $nextQuestionUrl3 ?>">3</a>
-  <a href="<?php print $nextQuestionUrl4 ?>">4</a>
-  <a href="<?php print $nextQuestionUrl5 ?>">5</a>
+  <?php foreach(range(1, 4) as $number): ?>
+    <a href="<?php print $nextQuestionUrl . $number; ?>"
+       class="<?php print $previousResponse == $number ? 'selected' : '' ?>"><?php print $number ?></a>
+  <?php endforeach ?>
 <?php else: ?>
   <h1>Página incorrecta! regresa atrás</h1>
 <?php endif; ?>

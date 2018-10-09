@@ -8,6 +8,7 @@
 if (!isset($_SESSION)) {
   // session isn't started
   session_start();
+  unset($_SESSION);
 }
 ?>
 
