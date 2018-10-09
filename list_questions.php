@@ -140,6 +140,10 @@ $questions = [
     'isConverted' => FALSE,
   ],
   [
+    'question' => 'Puedo tener muchas maneras de responder una pregunta difícil, cuando yo quiero.',
+    'isConverted' => FALSE,
+  ],
+  [
     'question' => 'Me molesto fácilmente.',
     'isConverted' => TRUE,
   ],
