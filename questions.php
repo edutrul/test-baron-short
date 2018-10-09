@@ -29,15 +29,15 @@ $nextQuestionUrl = $basePath . '?question_id=' . $nextQuestionId . '&previous_re
 //    )
 $question = !empty($questions[$questionId]) ? $questions[$questionId] : NULL;
 $previousResponse = !empty($_SESSION['questions'][$questionId]) ? $_SESSION['questions'][$questionId] : NULL;
-print $previousQuestionId;
-print $previousResponse;
+//print $previousQuestionId;
+//print $previousResponse;
 // Here we store answers from previous question:
 if (!empty($_GET['previous_response']) && $previousQuestionId !== -1) {
   $_SESSION['questions'][$previousQuestionId] = $_GET['previous_response'];
   $previousResponse = $_GET['previous_response'];
 }
 
-print_r($_SESSION);
+//print_r($_SESSION);
 
 
 ?>
