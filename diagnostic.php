@@ -22,9 +22,11 @@ print_r(getDirectScore($questions, $_SESSION['questions']));
 
 function getDirectScore($questionsFromList, $answers) {
   $intrapersonal = getEmotionScore($questionsFromList, $answers, [2, 6, 16, 27, 42, 52]);
+  $interpersonal = getEmotionScore($questionsFromList, $answers, [1, 4, 9, 13, 19, 23, 35, 40, 44, 50, 54, 58]);
+
   $directScore = [
     'intrapersonal' => $intrapersonal,
-    'interpersonal' => 0,
+    'interpersonal' => $interpersonal,
     'manejo_del_estress' => 0,
     'adaptabilidad' => 0,
     'animo_general' => 0,
