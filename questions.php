@@ -49,6 +49,7 @@ if (!empty($_GET['previous_response']) && $previousQuestionId !== -1) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Test de Baron</title>
@@ -67,6 +68,16 @@ if (!empty($_GET['previous_response']) && $previousQuestionId !== -1) {
     <?php else: ?>
         <h1>Página incorrecta! regresa atrás</h1>
     <?php endif; ?>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ul>
+            <li>1. Muy rara vez</li>
+            <li>2. Rara vez</li>
+            <li>3. A menudo</li>
+            <li>4. Muy a menudo</li>
+        </ul>
     </div>
 </div>
 </body>
