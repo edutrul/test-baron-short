@@ -14,4 +14,9 @@ if (!isset($_SESSION)) {
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 unset($_SESSION['questions']);
+unset($_SESSION['personal_data']);
+print_r($_SESSION);
+
+
+
 ?>

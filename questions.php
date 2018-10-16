@@ -13,8 +13,9 @@ if (!isset($_SESSION)) {
 //unset($_SESSION['questions']);
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-
 require_once 'list_questions.php';
+print_r($_SESSION);
+
 $questionId = isset($_GET['question_id']) ? $_GET['question_id'] -1 : '';
 // The next question to ask to user.
 $nextQuestionId = $questionId + 2;
