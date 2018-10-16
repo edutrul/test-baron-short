@@ -17,4 +17,36 @@ print_r($questions);
 
 print_r($_SESSION);
 
+// @TODO: Better change `questions` to `answers` for better understanding.
+print_r(getDirectScore($questions, $_SESSION['questions']));
+
+function getDirectScore($questionsFromList, $answers) {
+  $intrapersonal = getEmotionScore($questionsFromList, $answers, [2, 6, 16, 27, 42, 52]);
+  $directScore = [
+    'intrapersonal' => $intrapersonal,
+    'interpersonal' => 0,
+    'manejo_del_estress' => 0,
+    'adaptabilidad' => 0,
+    'animo_general' => 0,
+    'impresion_positiva' => 0,
+  ];
+  return $directScore;
+}
+
+function getEmotionScore($questionsFromList, $answers, $questionIds) {
+  $sum = 0;
+  foreach ($questionIds as $questionId) {
+    // CUANDO ESTA CONVERTIDO LO RESTA
+    if (!empty($questionsFromList[$questionId]['isConverted'])) {
+      // @TODO: do "resta"
+      $sum += (5 - $answers[$questionId]);
+    }
+    // CUANDO NO ES CONVERTIDO.
+    else {
+      $sum += $answers[$questionId];
+    }
+  }
+  return $sum;
+}
+
 ?>
