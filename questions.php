@@ -41,12 +41,32 @@ if (!empty($_GET['previous_response']) && $previousQuestionId !== -1) {
 
 
 ?>
-<?php if (!empty($question)): ?>
-  <h1><?php print $question['question']; ?></h1>
-  <?php foreach(range(1, 4) as $number): ?>
-    <a href="<?php print $nextQuestionUrl . $number; ?>"
-       class="<?php print $previousResponse == $number ? 'selected' : '' ?>"><?php print $number ?></a>
-  <?php endforeach ?>
-<?php else: ?>
-  <h1>Página incorrecta! regresa atrás</h1>
-<?php endif; ?>
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Test de Baron</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="container  d-flex flex-column justify-content-center h-100 text-black align-items-center">
+    <?php if (!empty($question)): ?>
+        <h1><?php print $question['question']; ?></h1>
+        <div class=" p-5  col-md-4 col-xs-6 ">
+        <?php foreach(range(1, 4) as $number): ?>
+            <a class="btn btn-primary" href="<?php print $nextQuestionUrl . $number; ?>"
+               class="<?php print $previousResponse == $number ? 'selected' : '' ?>"><?php print $number ?></a>
+        <?php endforeach ?>
+        </div>
+    <?php else: ?>
+        <h1>Página incorrecta! regresa atrás</h1>
+    <?php endif; ?>
+    </div>
+</div>
+</body>
+</html>
