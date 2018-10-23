@@ -20,7 +20,6 @@ if (!empty($_POST['first_name'])) {
 
 <!DOCTYPE HTML>
 
-<html>
 
 <html lang="es">
 <head>
@@ -36,7 +35,7 @@ if (!empty($_POST['first_name'])) {
 
 <body>
 <div class="container-fluid instruccion">
-    <div class="container  d-flex flex-column justify-content-center h-200 text-black align-items-center  ">
+    <div class="container d-flex flex-column justify-content-center h-200 text-black align-items-center  ">
         <?php if (!empty($_SESSION['personal_data'])): ?>
             <h1>INDICACIONES DEL TEST BARON</h1>
             <h2>Estimado <?php print $first_name; ?></h2>
