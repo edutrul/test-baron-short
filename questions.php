@@ -7,8 +7,8 @@
 <?php
 
 if (!isset($_SESSION)) {
-  // session isn't started
-  session_start();
+    // session isn't started
+    session_start();
 }
 //unset($_SESSION['questions']);
 error_reporting(E_ALL);
@@ -16,10 +16,10 @@ ini_set('display_errors', '1');
 require_once 'list_questions.php';
 
 
-$questionId = isset($_GET['question_id']) ? $_GET['question_id'] -1 : '';
+$questionId = isset($_GET['question_id']) ? $_GET['question_id'] - 1 : '';
 // The next question to ask to user.
 $nextQuestionId = $questionId + 2;
-$previousQuestionId = $questionId -1;
+$previousQuestionId = $questionId - 1;
 $basePath = 'questions.php';
 $nextQuestionUrl = $basePath . '?question_id=' . $nextQuestionId . '&previous_response=';
 // Get the question in array format
@@ -34,8 +34,8 @@ $previousResponse = !empty($_SESSION['questions'][$questionId]) ? $_SESSION['que
 //print $previousResponse;
 // Here we store answers from previous question:
 if (!empty($_GET['previous_response']) && $previousQuestionId !== -1) {
-  $_SESSION['questions'][$previousQuestionId] = $_GET['previous_response'];
-  $previousResponse = $_GET['previous_response'];
+    $_SESSION['questions'][$previousQuestionId] = $_GET['previous_response'];
+    $previousResponse = $_GET['previous_response'];
 }
 
 //print_r($_SESSION);
@@ -56,30 +56,30 @@ if (!empty($_GET['previous_response']) && $previousQuestionId !== -1) {
 </head>
 <body>
 <div class="container-fluid">
-    <div class="container d-flex flex-column justify-content-center h-100 text-black align-items-center ">
-    <?php if (!empty($question)): ?>
-        <h1><?php print $question['question']; ?></h1>
-        <div class=" p-5  col-md-4 col-xs-6 ">
-        <?php foreach(range(1, 4) as $number): ?>
-            <a class="btn btn-primary" href="<?php print $nextQuestionUrl . $number; ?>"
-               class="<?php print $previousResponse == $number ? 'selected' : '' ?>"><?php print $number ?></a>
-        <?php endforeach ?>
-        </div>
-    <?php else: ?>
-        <h1>Página incorrecta! regresa atrás</h1>
-    <?php endif; ?>
+    <div class="container d-flex flex-column justify-content-center h-100 text-black align-items-center  ">
+        <?php if (!empty($question)): ?>
+            <h1><?php print $question['question']; ?></h1>
+            <div class=" p-5  col-md-4 col-xs-6 ">
+                <?php foreach (range(1, 4) as $number): ?>
+                    <a class="btn btn-primary" href="<?php print $nextQuestionUrl . $number; ?>"
+                       class="<?php print $previousResponse == $number ? 'selected' : '' ?>"><?php print $number ?></a>
+                <?php endforeach ?>
+            </div>
+        <?php else: ?>
+            <h1>Página incorrecta! regresa atrás</h1>
+        <?php endif; ?>
     </div>
 </div>
 
-<div class="container">
-<div class="column justify-content-center align-items-center ">
-    <div class="col-lg-12">
-    <h5 class="text-center">1. Muy rara vez</h5>
-    <h5 class="text-center">2. Rara vez</h5>
-    <h5 class="text-center">3. A menudo</h5>
-    <h5 class="text-center">4. Muy a menudo</h5>
+<div class="container-fluid">
+    <div class="container d-flex flex-column justify-content-center h-100 text-black align-items-center">
+        <div class="p-5  col-md-4 col-xs-6">
+            <h5>1. Muy rara vez</h5>
+            <h5>2. Rara vez</h5>
+            <h5>3. A menudo</h5>
+            <h5>4. Muy a menudo</h5>
+        </div>
     </div>
-</div>
 </div>
 
 
