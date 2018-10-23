@@ -54,9 +54,12 @@ if (!empty($_POST['first_name'])) {
                 respuestas buenas o malas.
                 Por favor selecciona la respuesta en cada oración
             </p>
-            <div class=" offset-sm-2 col-sm-10">
-                <a class="btn btn-primary" href="questions.php?question_id=1">Siguiente</a>
+            <div class="form-row text-center">
+                <div class=" col-25 offset-sm-2 col-sm-10">
+                    <a class="btn btn-primary" href="questions.php?question_id=1">Siguiente</a>
+                </div>
             </div>
+
 
         <?php endif; ?>
     </div>

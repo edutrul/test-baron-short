@@ -32,11 +32,9 @@ if (!isset($_SESSION)) {
 
     <div class="container d-flex flex-column justify-content-center h-100 text-white align-items-center col-md-6 col-xs-8 ">
 
-
         <h1>Bienvenido al TEST BARON</h1>
         <p>Test creado por la Universidad Autónoma del Perú en el área de innovación</p>
         <p>el test es la versión corta del BARON (60 preguntas)</p>
-
     </div>
     <br>
     <div class="container col-md-6 col-xs-8 ">
@@ -88,23 +86,22 @@ if (!isset($_SESSION)) {
                     <input class="form-control" placeholder="Colegio" name="colegio" type="text"/>
                 </div>
             </div>
-
+            <br>
             <div class="form-row text-center">
-
-                <div class=" col-12 offset-sm-2 col-sm-10">
+                <div class=" col-25 offset-sm-2 col-sm-10">
                     <button class="btn btn-primary" type="submit" value="Siguiente">Submit</button>
                 </div>
             </div>
 
         </form>
 
-
     </div>
 
     <footer class="page-footer font-small blue">
 
-        <div class="footer-copyright text-center py-3">© 2018 Copyright: Autor Cristian Diaz , Mentor: Eduardo Telaya
-            <a href="https://web.facebook.com/Innovua/?_rdc=1&_rdr"> Desarrollado en Innovua</a>
+        <div class="footer-copyright text-center py-3">© 2018 Copyright: Autor Cristian Diaz ,Asesora: Teresa, Mentor: Eduardo Telaya
+            <br>
+            <a href="https://web.facebook.com/Innovua/?_rdc=1&_rdr">  Desarrollado en Innovua</a>
         </div>
 
     </footer>
