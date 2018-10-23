@@ -14,7 +14,7 @@ if (!isset($_SESSION)) {
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once 'list_questions.php';
-print_r($_SESSION);
+
 
 $questionId = isset($_GET['question_id']) ? $_GET['question_id'] -1 : '';
 // The next question to ask to user.
@@ -70,15 +70,15 @@ if (!empty($_GET['previous_response']) && $previousQuestionId !== -1) {
     <?php endif; ?>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <ul>
-            <li>1. Muy rara vez</li>
-            <li>2. Rara vez</li>
-            <li>3. A menudo</li>
-            <li>4. Muy a menudo</li>
-        </ul>
-    </div>
+
+<div class="container-fluid">
+        <div class="container d-flex flex-column  text-black h-100 align-items-start">
+            <h5>1. Muy rara vez</h5>
+            <h5>2. Rara vez</h5>
+            <h5>3. A menudo</h5>
+            <h5>4. Muy a menudo</h5>
+        </div>
 </div>
+
 </body>
 </html>

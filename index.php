@@ -37,7 +37,7 @@ if (!isset($_SESSION)) {
         <p>Test creado por la Universidad Autónoma del Perú en el área de innovación</p>
         <p>el test es la versión corta del BARON (60 preguntas)</p>
 
-    </div>
+    </div><br>
     <div class="container col-md-6 col-xs-8 ">
 
         <form id="data" action="instructions.php" method="post">
@@ -61,9 +61,9 @@ if (!isset($_SESSION)) {
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label"> Edad</label>
+                <label class="col-sm-2 col-form-label"> Fecha de Nacimiento</label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="Edad" name="age" type="text"/>
+                    <input class="form-control" type="date" name="date" type="text"/>
                 </div>
             </div>
             <div class="form-group row">
@@ -78,15 +78,10 @@ if (!isset($_SESSION)) {
                     <input class="form-control" placeholder="Colegio" name="colegio" type="text"/>
                 </div>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label"> Fecha</label>
-                <div class="col-sm-4">
-                    <input class="form-control" type="date" name="date" type="text"/>
-                </div>
-            </div>
-            <div class="form-group row">
 
-                <div class=" offset-sm-2 col-sm-10">
+            <div class="form-row text-center">
+
+                <div class=" col-12 offset-sm-2 col-sm-10">
                     <button class="btn btn-primary" type="submit" value="Siguiente">Submit</button>
                 </div>
             </div>
