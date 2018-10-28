@@ -1,10 +1,21 @@
 <?php
-/**
- * Here goes all questions from test baron.
- */
-?>
+require_once 'connect_db.php';
 
-<?php
+// insertar datos
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$select_sexo = $_POST['select_sexo'];
+$date_age = $_POST['date'];
+$select_grado = $_POST['select_grado'];
+$colegio = $_POST['colegio'];
+$fecha_test = date('d-m-Y');
+
+
+$sql = "INSERT INTO   participante (nombres,apellidos,sexo,fecha_nacimiento,grado,colegio,fecha_creacion_test) 
+VALUES ('$first_name','$last_name','$select_sexo','$date_age','$select_grado','$colegio','$fecha_test')";
+$conn->query($sql);
+// fin de insertar datos
+
 if (!empty($_POST['first_name'])) {
     $first_name = $_POST['first_name'];
     if (!isset($_SESSION)) {
@@ -15,6 +26,9 @@ if (!empty($_POST['first_name'])) {
         // @TODO: Maybe redirect to homepage if no session started?.
     }
 }
+
+
+
 ?>
 
 

@@ -43,47 +43,47 @@ if (!isset($_SESSION)) {
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label"> Nombre</label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="Nombre" name="first_name" type="text"/>
+                    <input class="form-control" placeholder="Nombre" name="first_name" type="text"required/>
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label"> Apellido</label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="Apellidos" name="last_name" type="text"/>
+                    <input class="form-control" placeholder="Apellidos" name="last_name" type="text" required/>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="select_sexo">Sexo</label>
                 <div class="col-sm-4">
-                    <select class="form-control" id="select_Sexo">
-                        <option>Masculino</option>
-                        <option>Femenino</option>
+                    <select class="form-control" name="select_sexo"  required>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
                     </select>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label"> Fecha de Nacimiento</label>
                 <div class="col-sm-4">
-                    <input class="form-control" type="date" name="date" type="text"/>
+                    <input class="form-control" type="date" name="date" type="text" required/>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label" for="select_grado">Grado</label>
                 <div class="col-sm-4">
-                    <select class="form-control" id="select_grado">
-                        <option>Primero</option>
-                        <option>Segundo</option>
-                        <option>Tercero</option>
-                        <option>Cuarto</option>
-                        <option>Quinto</option>
+                    <select class="form-control" name="select_grado"  required>
+                        <option value="primero">Primero</option>
+                        <option value="segundo">Segundo</option>
+                        <option value="tercero">Tercero</option>
+                        <option value="cuarto">Cuarto</option>
+                        <option value="quinto">Quinto</option>
                     </select>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label"> Colegio</label>
                 <div class="col-sm-4">
-                    <input class="form-control" placeholder="Colegio" name="colegio" type="text"/>
+                    <input class="form-control" placeholder="Colegio" name="colegio" type="text" required/>
                 </div>
             </div>
             <br>
