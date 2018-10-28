@@ -2,17 +2,18 @@
 require_once 'connect_db.php';
 
 // insertar datos
-$first_name = $_POST['first_name'];
+$names = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $select_sexo = $_POST['select_sexo'];
-$date_age = $_POST['date'];
+$date_age = strtotime($_POST['date']);
 $select_grado = $_POST['select_grado'];
 $colegio = $_POST['colegio'];
-$fecha_test = date('d-m-Y');
+$date = date("d M Y H:i:s");
+$fecha_test = strtotime($date);
 
 
 $sql = "INSERT INTO   participante (nombres,apellidos,sexo,fecha_nacimiento,grado,colegio,fecha_creacion_test) 
-VALUES ('$first_name','$last_name','$select_sexo','$date_age','$select_grado','$colegio','$fecha_test')";
+VALUES ('$names','$last_name','$select_sexo','$date_age','$select_grado','$colegio','$fecha_test')";
 $conn->query($sql);
 // fin de insertar datos
 
@@ -52,7 +53,7 @@ if (!empty($_POST['first_name'])) {
     <div class="container d-flex flex-column justify-content-center h-200 text-black align-items-center  ">
         <?php if (!empty($_SESSION['personal_data'])): ?>
             <h1>INDICACIONES DEL TEST BARON</h1>
-            <h2>Estimado <?php print $first_name; ?></h2>
+            <h2>Estimado(a) <?php print $first_name; ?></h2>
             <p>Lee cada oración y elije una respuesta que mejor te describe, hay cuatro posibles respuestas:</p>
             <ul>
                 <li>1. Muy rara vez</li>
