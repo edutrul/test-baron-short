@@ -53,6 +53,7 @@ $questions = [
   ],
   [
     'question' => 'Me molesto demasiado de cualquier cosa.',
+    'isConverted' => TRUE,
   ],
   [
     'question' => 'Es fácil para mí comprender las cosas nuevas.',
