@@ -62,7 +62,7 @@ if (!empty($_POST['first_name'])) {
                 <li>4. Muy a menudo</li>
             </ul>
             <p>
-                Dinos cómo te sientes, piensas o actúas <strong>LA MAYOR PARTE DEL TIEMPO EN LA MAYORIA DE
+                Dinos cómo te sientes, piensas o actúas <strong>LA MAYOR PARTE DEL TIEMPO O EN LA MAYORIA DE
                     LUGARES.</strong>
                 Elige una, y Sólo <strong>UNA</strong> respuesta para cada oración.Esto no es un examen; no existen
                 respuestas buenas o malas.
