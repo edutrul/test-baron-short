@@ -2,27 +2,37 @@
 /**
  * Here goes all questions from test baron.
  */
-?>
-
-<?php
 
 if (!isset($_SESSION)) {
-    // session isn't started
-    session_start();
+  // session isn't started
+  session_start();
 }
+define('SCORE_EXCELLENT', 'Capacidad emocional y social atipica. Excelentemente desarrollada.');
+define('SCORE_VERY_GOOD', 'Capacidad emocional y social muy alta. Muy bien desarrollada.');
+define('SCORE_GOOD', 'Capacidad emocional y social adecuada. Bien desarrollada.');
+define('SCORE_AVERAGE', 'Capacidad emocional y social adecuada. Promedio.');
+define('SCORE_LOW', 'Capacidad emocinoal y social baja.  Necesita mejorarse.');
+define('SCORE_VERY_LOW', 'Capacidad emocinoal y social muy baja.  Necesita mejorarse considerablemente.');
+define('SCORE_POOR', 'Capacidad emocional y social atipica y deficiente. Nivel de desarrollo marcadamente bajo.');
 
 require_once 'list_questions.php';
 
-//print_r($questions);
-
-//print_r($_SESSION);
-
-
 // @TODO: Better change `questions` to `answers` for better understanding.
-print_r(getDirectScore($questions, $_SESSION['questions']));
+//print_r(getDirectScore($questions, $_SESSION['questions']));
 
-function getDirectScore($questionsFromList, $answers)
-{
+$scores = getDirectScore($questions, $_SESSION['questions']);
+$scoreICENA = getScoreBaronICENA($scores);
+$scoreInterpretationICENA = getInterpretationFromScoreICENA($scoreICENA);
+
+/**
+ * Get direct score.
+ *
+ * @param $questionsFromList
+ * @param $answers
+ *
+ * @return array
+ */
+function getDirectScore($questionsFromList, $answers) {
     $intrapersonal = getEmotionScore($questionsFromList, $answers, [2, 6, 16, 27, 42, 52]);
     $interpersonal = getEmotionScore($questionsFromList, $answers, [1, 4, 9, 13, 19, 23, 35, 40, 44, 50, 54, 58]);
     $estres = getEmotionScore($questionsFromList, $answers, [2, 5, 10, 14, 20, 25, 34, 38, 45, 48, 53, 57]);
@@ -41,8 +51,16 @@ function getDirectScore($questionsFromList, $answers)
     return $directScore;
 }
 
-function getEmotionScore($questionsFromList, $answers, $questionIds)
-{
+/**
+ * Get emotion score.
+ *
+ * @param $questionsFromList
+ * @param $answers
+ * @param $questionIds
+ *
+ * @return int
+ */
+function getEmotionScore($questionsFromList, $answers, $questionIds) {
     $sum = 0;
     foreach ($questionIds as $questionId) {
         // CUANDO ESTA CONVERTIDO LO RESTA
@@ -57,7 +75,62 @@ function getEmotionScore($questionsFromList, $answers, $questionIds)
     return $sum;
 }
 
-?>
+/**
+ * Get score from TEST BARON SHORT ICENA
+ *
+ * where the score is for
+ * INTERPERSONAL, INTRAPERSONAL, ADAPTABILIDAD Y MANEJO DE ESTRESS.
+ *
+ * @param array $scores
+ */
+function getScoreBaronICENA($scores) {
+  return $scores['intrapersonal'] +
+    $scores['interpersonal'] +
+    $scores['manejo_del_estress'] +
+    $scores['adaptabilidad'];
+}
 
-</body>
-</html>
+/**
+ * Get interpretation from score ICENA.
+ *
+ * @param int $scoreICENA
+ *   Score ICENA
+ *
+ * @return string
+ *   The correct interpretation from the score ICENA.
+ */
+function getInterpretationFromScoreICENA($scoreICENA) {
+  switch ($scoreICENA) {
+    case $scoreICENA >= 130:
+      return SCORE_EXCELLENT;
+    case $scoreICENA >= 120 && $scoreICENA <= 129:
+      return SCORE_VERY_GOOD;
+    case $scoreICENA >= 110 && $scoreICENA <= 119:
+      return SCORE_GOOD;
+    case $scoreICENA >= 90 && $scoreICENA <= 109:
+      return SCORE_AVERAGE;
+    case $scoreICENA >= 80 && $scoreICENA <= 89:
+      return SCORE_LOW;
+    case $scoreICENA >= 70 && $scoreICENA <= 79:
+      return SCORE_VERY_LOW;
+    case $scoreICENA <= 69:
+      return SCORE_POOR;
+  }
+}
+
+/**
+ * Get interpretation score scale.
+ */
+function getAllInterpretationScore() {
+  return [
+    '130 y más' => SCORE_EXCELLENT,
+    '120 a 129' => SCORE_VERY_GOOD,
+    '110 a 119' => SCORE_GOOD,
+    '90 a 109' => SCORE_AVERAGE,
+    '80 a 89' => SCORE_LOW,
+    '70 a 79' => SCORE_VERY_LOW,
+    '69 y menos' => SCORE_POOR,
+  ];
+}
+
+?>

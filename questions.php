@@ -38,6 +38,11 @@ if (!empty($_GET['previous_response']) && $previousQuestionId !== -1) {
     $previousResponse = $_GET['previous_response'];
 }
 
+if ($questionId == 60) {
+  $url_diagnostic = 'resultados.php';
+  header('Location: ' . $url_diagnostic);
+}
+
 //print_r($_SESSION);
 
 
