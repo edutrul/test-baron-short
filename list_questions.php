@@ -8,197 +8,197 @@
 
 $questions = [
   [
-    'question' => 'Me gusta divertirme',
+    'question' => '1. Me gusta divertirme',
   ],
   [
-    'question' => 'Soy bueno(a) para comprender cómo la gente se siente',
+    'question' => '2. Soy bueno(a) para comprender cómo la gente se siente',
   ],
   [
-    'question' => 'Puedo mantener la calma cuando estoy molesto',
+    'question' => '3. Puedo mantener la calma cuando estoy molesto',
   ],
   [
-    'question' => 'Soy feliz',
+    'question' => '4. Soy feliz',
   ],
   [
-    'question' => 'Me importa lo que les suceda a las personas',
+    'question' => '5. Me importa lo que les suceda a las personas',
   ],
   [
-    'question' => 'Me es díficil controlar mi cólera',
+    'question' => '6. Me es díficil controlar mi cólera',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Es facil decir a la gente cómo me siento',
+    'question' => '7. Es facil decir a la gente cómo me siento',
   ],
   [
-    'question' => 'Me gustan todas las personas que conozco',
+    'question' => '8. Me gustan todas las personas que conozco',
   ],
   [
-    'question' => 'Me siento seguro(a) de mi mismo(a)',
+    'question' => '9. Me siento seguro(a) de mi mismo(a)',
   ],
   [
-    'question' => 'Sé cómo se sienten las personas',
+    'question' => '10. Sé cómo se sienten las personas',
   ],
   [
-    'question' => 'Sé como mantenerme tranquilo(a)',
+    'question' => '11. Sé como mantenerme tranquilo(a)',
   ],
   [
-    'question' => 'Intento usar diferentes formas de responder las preguntas difíciles.',
+    'question' => '12. Intento usar diferentes formas de responder las preguntas difíciles.',
   ],
   [
-    'question' => 'Pienso que las cosas que hago salen bien.',
+    'question' => '13. Pienso que las cosas que hago salen bien.',
 
   ],
   [
-    'question' => 'Soy capaz de respetar a los demás.',
+    'question' => '14. Soy capaz de respetar a los demás.',
   ],
   [
-    'question' => 'Me molesto demasiado de cualquier cosa.',
+    'question' => '15. Me molesto demasiado de cualquier cosa.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Es fácil para mí comprender las cosas nuevas.',
+    'question' => '16. Es fácil para mí comprender las cosas nuevas.',
   ],
   [
-    'question' => 'Puedo hablar fácilmente sobre mis sentimientos.',
+    'question' => '17. Puedo hablar fácilmente sobre mis sentimientos.',
   ],
   [
-    'question' => 'Pienso bien de todas las personas.',
+    'question' => '18. Pienso bien de todas las personas.',
   ],
   [
-    'question' => 'Espero lo mejor.',
+    'question' => '19. Espero lo mejor.',
   ],
   [
-    'question' => 'Tener amigos es importante.',
+    'question' => '20. Tener amigos es importante.',
   ],
   [
-    'question' => 'Peleo con la gente.',
+    'question' => '21. Peleo con la gente.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Puedo comprender preguntas difíciles.',
+    'question' => '22. Puedo comprender preguntas difíciles.',
   ],
   [
-    'question' => 'Me agrada sonreír.',
+    'question' => '23. Me agrada sonreír.',
   ],
   [
-    'question' => 'Intento no herir los sentimientos de las personas.',
+    'question' => '24. Intento no herir los sentimientos de las personas.',
   ],
   [
-    'question' => 'No me doy por vencido (a) ante un problema hasta que lo resuelvo.',
+    'question' => '25. No me doy por vencido (a) ante un problema hasta que lo resuelvo.',
   ],
   [
-    'question' => 'Tengo mal genio.',
+    'question' => '26. Tengo mal genio.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Nada me molesta.',
+    'question' => '27. Nada me molesta.',
   ],
   [
-    'question' => 'Es difícil hablar sobre mis sentimientos más íntimos.',
+    'question' => '28. Es difícil hablar sobre mis sentimientos más íntimos.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Sé que las cosas saldrán bien.',
+    'question' => '29. Sé que las cosas saldrán bien.',
   ],
   [
-    'question' => 'Puedo dar buenas respuestas a preguntas difíciles.',
+    'question' => '30. Puedo dar buenas respuestas a preguntas difíciles.',
   ],
   [
-    'question' => 'Puedo fácilmente describir mis sentimientos.',
+    'question' => '31. Puedo fácilmente describir mis sentimientos.',
   ],
   [
-    'question' => 'Sé cómo divertirme.',
+    'question' => '32. Sé cómo divertirme.',
   ],
   [
-    'question' => 'Debo decir siempre la verdad.',
+    'question' => '33. Debo decir siempre la verdad.',
   ],
   [
-    'question' => 'Puedo tener muchas maneras de responder una pregunta difícil, cuando yo quiero.',
+    'question' => '34. Puedo tener muchas maneras de responder una pregunta difícil, cuando yo quiero.',
   ],
   [
-    'question' => 'Me molesto fácilmente.',
+    'question' => '35. Me molesto fácilmente.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Me agrada hacer cosas para los demás.',
+    'question' => '36. Me agrada hacer cosas para los demás.',
   ],
   [
-    'question' => 'No me siento muy feliz.',
+    'question' => '37. No me siento muy feliz.',
     'isConverted'=>TRUE,
   ],
   [
-    'question' => 'Puedo usar fácilmente diferentes modos de resolver los problemas.',
+    'question' => '38. Puedo usar fácilmente diferentes modos de resolver los problemas.',
   ],
   [
-    'question' => 'Demoro en molestarme.',
+    'question' => '39. Demoro en molestarme.',
   ],
   [
-    'question' => 'Me siento bien conmigo mismo (a).',
+    'question' => '40. Me siento bien conmigo mismo (a).',
   ],
   [
-    'question' => 'Hago amigos fácilmente.',
+    'question' => '41. Hago amigos fácilmente.',
   ],
   [
-    'question' => 'Pienso que soy el (la) mejor en todo lo que hago.',
+    'question' => '42. Pienso que soy el (la) mejor en todo lo que hago.',
   ],
   [
-    'question' => 'Para mí es fácil decirle a las personas cómo me siento.',
+    'question' => '43. Para mí es fácil decirle a las personas cómo me siento.',
   ],
   [
-    'question' => 'Cuando respondo preguntas difíciles trato de pensar en muchas soluciones.',
+    'question' => '44. Cuando respondo preguntas difíciles trato de pensar en muchas soluciones.',
   ],
   [
-    'question' => 'Me siento mal cuando las personas son heridas en sus sentimientos.',
+    'question' => '45. Me siento mal cuando las personas son heridas en sus sentimientos.',
   ],
   [
-    'question' => 'Cuando estoy molesto (a) con alguien, me siento molesto (a) por mucho tiempo.',
+    'question' => '46. Cuando estoy molesto (a) con alguien, me siento molesto (a) por mucho tiempo.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Me siento feliz con la clase de persona que soy.',
+    'question' => '47. Me siento feliz con la clase de persona que soy.',
   ],
   [
-    'question' => 'Soy bueno (a) resolviendo problemas.',
+    'question' => '48. Soy bueno (a) resolviendo problemas.',
   ],
   [
-    'question' => 'Para mí es difícil esperar mi turno.',
+    'question' => '49. Para mí es difícil esperar mi turno.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Me divierte las cosas que hago.',
+    'question' => '50. Me divierte las cosas que hago.',
   ],
   [
-    'question' => 'Me agradan mis amigos.',
+    'question' => '51. Me agradan mis amigos.',
   ],
   [
-    'question' => 'No tengo días malos.',
+    'question' => '52. No tengo días malos.',
   ],
   [
-    'question' => 'Me es difícil decirle a los demás mis sentimientos.',
+    'question' => '53. Me es difícil decirle a los demás mis sentimientos.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Me fastidio fácilmente.',
+    'question' => '54. Me fastidio fácilmente.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Puedo darme cuenta cuando mi amigo se siente triste.',
+    'question' => '55. Puedo darme cuenta cuando mi amigo se siente triste.',
   ],
   [
-    'question' => 'Me gusta mi cuerpo.',
+    'question' => '56. Me gusta mi cuerpo.',
   ],
   [
-    'question' => 'Aún cuando las cosas sean difíciles, no me doy por vencido.',
+    'question' => '57. Aún cuando las cosas sean difíciles, no me doy por vencido.',
   ],
   [
-    'question' => 'Cuando me molesto actúo sin pensar.',
+    'question' => '58. Cuando me molesto actúo sin pensar.',
     'isConverted' => TRUE,
   ],
   [
-    'question' => 'Sé cuando la gente está molesta aún cuando no dicen nada.',
+    'question' => '59. Sé cuando la gente está molesta aún cuando no dicen nada.',
   ],
   [
-    'question' => 'Me gusta la forma como me veo.',
+    'question' => '60. Me gusta la forma como me veo.',
   ],
 
 ];
