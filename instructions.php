@@ -68,7 +68,7 @@ if (!empty($_POST['first_name'])) {
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Test de Baron</a>
-        <img  src="img/logo.png" height="50" width="120">
+        <img  class="bg-white" src="img/logo.png" height="50" width="140">
     </div>
 </nav>
 
