@@ -7,7 +7,7 @@ if (!isset($_SESSION)) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -40,6 +40,7 @@ if (!isset($_SESSION)) {
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Test de Baron</a>
+        <img  src="img/logo.png" height="50" width="120">
     </div>
 </nav>
 
@@ -63,34 +64,32 @@ if (!isset($_SESSION)) {
             <div class="col-lg-8 mx-auto">
                 <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                 <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                <form name="sentMessage" id="contactForm" novalidate="novalidate" action="instructions.php" method="post">
+                <form  id="contactForm" novalidate="novalidate" action="instructions.php" method="post">
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Nombre</label>
+                            <p class=" lead">Nombre:</p>
                             <input class="form-control" name="first_name" type="text" placeholder="Nombre" required="required" data-validation-required-message="Por favor ingrese su nombre">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Apellido</label>
+                            <p class=" lead">Apellido:</p>
                             <input class="form-control" id="last_name" name="last_name" type="text" placeholder="Apellido" required="required" data-validation-required-message="Por favor ingrese su apellido">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Colegio</label>
-                            <input class="form-control" id="email" type="text" name="colegio" placeholder="Colegio" required="required" data-validation-required-message="Ingrese su Colegio">
+                            <p class=" lead">Colegio:</p>
+                            <input class="form-control" id="colegio" type="text" name="colegio" placeholder="Colegio" required="required" data-validation-required-message="Ingrese su Colegio">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <label>Sexo</label>
-                        </div>
-                        <div class="form-group  controls mb-0 pb-2">
-                            <select class="form-control custom-select-lg" name="select_sexo"  required>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <p class=" lead">Sexo:</p>
+                            <select class="form-control custom-select-lg" name="select_sexo"   required>
                                 <option value="masculino">Masculino</option>
                                 <option value="femenino">Femenino</option>
                             </select>
@@ -98,10 +97,9 @@ if (!isset($_SESSION)) {
                         </div>
                     </div>
                     <div class="control-group">
-                        <div class=form-group"">
-                            <label>Grado</label>
-                        </div>
-                        <div class="form-group  controls mb-0 pb-2">
+
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <p class=" lead">Grado:</p>
                             <select class="form-control custom-select-lg" name="select_grado"  required>
                                 <option value="primero">Primero</option>
                                 <option value="segundo">Segundo</option>
@@ -113,16 +111,16 @@ if (!isset($_SESSION)) {
                     </div>
 
                     <div class="control-group">
-                        <div class="form-group  controls mb-0 pb-2">
-                            <label>Fecha de Nacimiento</label>
-                            <input class="form-control" type="date" name="date"  type="text" required/>
+                        <div class=" form-group floating-label-form-group controls mb-0 pb-2">
+                            <p class=" lead">Fecha de Nacimiento:</p>
+                            <input class="calendar form-control" type="date" name="date"  type="text" required/>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <br>
-                    <div id="success"></div>
+                    <div id=""></div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton" value="Siguiente">Enviar</button>
+                        <button type="submit" class="btn btn-primary btn-xl"  value="Siguiente">Enviar</button>
                     </div>
                 </form>
             </div>
@@ -131,200 +129,18 @@ if (!isset($_SESSION)) {
 </section>
 
 <!-- Footer -->
-<footer class="footer text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-5 mb-lg-0">
-                <h4 class="text-uppercase mb-4">Location</h4>
-                <p class="lead mb-0">2215 John Daniel Drive
-                    <br>Clark, MO 65243</p>
-            </div>
-            <div class="col-md-4 mb-5 mb-lg-0">
-                <h4 class="text-uppercase mb-4">Around the Web</h4>
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                            <i class="fab fa-fw fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                            <i class="fab fa-fw fa-google-plus-g"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                            <i class="fab fa-fw fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                            <i class="fab fa-fw fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                            <i class="fab fa-fw fa-dribbble"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-                    <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
 <div class="copyright py-4 text-center text-white">
     <div class="container">
-        <small>Copyright &copy; Your Website 2018</small>
+        <small>Desarrollado por : Cristian  Diaz <br>Asesores TI: Eduardo Telaya <br> Asesora Psicologia: Teresa </small>
+
     </div>
 </div>
-
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-to-top d-lg-none position-fixed ">
     <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
         <i class="fa fa-chevron-up"></i>
     </a>
 </div>
-
-<!-- Portfolio Modals -->
-
-<!-- Portfolio Modal 1 -->
-<div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
-    <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-            <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                    <hr class="star-dark mb-5">
-                    <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                        <i class="fa fa-close"></i>
-                        Close Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Portfolio Modal 2 -->
-<div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
-    <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-            <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                    <hr class="star-dark mb-5">
-                    <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                        <i class="fa fa-close"></i>
-                        Close Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Portfolio Modal 3 -->
-<div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
-    <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-            <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                    <hr class="star-dark mb-5">
-                    <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                        <i class="fa fa-close"></i>
-                        Close Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Portfolio Modal 4 -->
-<div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
-    <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-            <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                    <hr class="star-dark mb-5">
-                    <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
-                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                        <i class="fa fa-close"></i>
-                        Close Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Portfolio Modal 5 -->
-<div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
-    <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-            <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                    <hr class="star-dark mb-5">
-                    <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
-                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                        <i class="fa fa-close"></i>
-                        Close Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Portfolio Modal 6 -->
-<div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
-    <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-            <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-                    <hr class="star-dark mb-5">
-                    <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
-                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                    <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                        <i class="fa fa-close"></i>
-                        Close Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
