@@ -46,21 +46,22 @@ if (!isset($_SESSION)) {
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Test de Baron</a>
-        <img  class="bg-white" src="img/logo.png" height="50" width="140">
+        <img  class="bg-white" src="img/logo.jpg" height="50" width="180">
     </div>
 
 </nav>
 
 <section id="contact">
-        <div class="container">
+               <div class="container">
             <br>
             <h2 class="text-center text-uppercase text-secondary mb-0">Página de resultados</h2>
             <br>
             <h2 class="text-center font-weight-light text-secondary mb-0">Este es tu score:</h2><br>
-            <h3 class="text-center font-weight-light mb-0">SCORE ICENA: <?php print $scoreICENA ?> <br></h3>
-            <p class="text-center text-secondary mb-0">INTERPRETACIÓN ICENA: <?php print $scoreInterpretationICENA; ?></p>
-
-
+            <h3 class="text-center font-weight-light mb-0">SCORE ICE - NA : <?php print $scoreICENA ?> <br></h3><br>
+            <table class="table table-responsive table-bordered table-hover table-active " >
+                <td>
+            <h4 class="text-center  mb-0 text-success" >INTERPRETACIÓN Test Baron ICE - NA: <?php print $scoreInterpretationICENA; ?></h4></table>
+            </td>
             <br>
             <table class="table table-borderless table-responsive   font-weight-light">
                 <th>Rangos</th>

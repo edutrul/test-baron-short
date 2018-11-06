@@ -40,7 +40,7 @@ if (!isset($_SESSION)) {
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Test de Baron</a>
-        <img  class="bg-white" src="img/logo.png" height="50" width="140">
+        <img  class="bg-white" src="img/logo.jpg" height="50" width="180">
     </div>
 </nav>
 
