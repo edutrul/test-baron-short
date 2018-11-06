@@ -84,7 +84,7 @@ if ($questionId == 60) {
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Test de Baron</a>
-        <<img  class="bg-white" src="img/logo.jpg" height="50" width="180">
+        <img   src="img/logo.png" height="50" width="180">
     </div>
 </nav>
 

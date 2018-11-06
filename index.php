@@ -40,7 +40,7 @@ if (!isset($_SESSION)) {
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Test de Baron</a>
-        <img  class="bg-white" src="img/logo.jpg" height="50" width="180">
+        <img   src="img/logo.png" height="50" width="180">
     </div>
 </nav>
 
@@ -113,7 +113,7 @@ if (!isset($_SESSION)) {
                     <div class="control-group">
                         <div class=" form-group floating-label-form-group controls mb-0 pb-2">
                             <p class=" lead">Fecha de Nacimiento:</p>
-                            <input class="calendar form-control" type="date" name="date"  type="text" required/>
+                            <input class=" form-control" type="date" name="date"  type="text" min="2000-01-01" max="2009-01-01" required/>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
